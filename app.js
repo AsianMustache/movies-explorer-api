@@ -4,16 +4,15 @@ const cookieParser = require("cookie-parser");
 const { requestLogger, errorLogger } = require("./middlewares/logger");
 const router = require("./routes/index");
 const errorHandler = require("./middlewares/centralErrors");
+const { dataBase } = require("./utils/constants");
 require("dotenv").config();
 
-const { PORT = 3000, MONGODB_URI } = process.env;
+const { PORT = 3000 } = process.env;
 
 const app = express();
 
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(dataBase, {
   useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
   useUnifiedTopology: true,
 }).then(() => console.log("Подключено к MongoDB"))
   .catch((err) => console.error("Ошибка подключения к MongoDB", err));
