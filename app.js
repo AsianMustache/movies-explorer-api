@@ -29,5 +29,5 @@ app.use(errorLogger);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-  console.log(`App listening at port ${PORT}`);
+  console.log(`Сервер запущен на порту ${PORT}`);
 });
