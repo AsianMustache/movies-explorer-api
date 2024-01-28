@@ -8,6 +8,15 @@ const {
 const { Errors } = require("../utils/errors");
 
 const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: {
+      value: true,
+      message: validationsMessages.FIELD_ERROR,
+    },
+    minlength: [2, validationsMessages.minLength(2)],
+    maxlength: [30, validationsMessages.maxLength(30)],
+  },
   email: {
     type: String,
     required: {

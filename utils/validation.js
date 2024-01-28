@@ -9,6 +9,7 @@ const validation = {
     body: Joi.object({
       email: Joi.string().pattern(emailRegex).required(),
       password: Joi.string().min(2).pattern(passwordRegex).required(),
+      name: Joi.string().required(),
     }),
   },
   userSignIn: {

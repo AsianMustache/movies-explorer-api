@@ -11,6 +11,9 @@ exports.getMovies = (req, res, next) => {
 };
 
 exports.saveMovie = (req, res, next) => {
+  console.log("Incoming request data:", req.body);
+  console.log("User ID:", req.user ? req.user._id : "User not authenticated");
+
   moviesModel
     .create({ owner: req.user, ...req.body })
     .then((movie) => res.status(http2.constants.HTTP_STATUS_CREATED).send(movie))
