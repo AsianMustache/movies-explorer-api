@@ -3,7 +3,7 @@
 
 ## Ссылки на проект
 
-IP 158.160.142.122
+IP 158.160.134.185
 
 Frontend https://diplomafan.nomoredomainsmonster.ru
 Backend https://api.diplomafan.nomoredomainsmonster.ru
