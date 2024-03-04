@@ -5,10 +5,10 @@ module.exports = function cors(req, res, next) {
     "http://localhost:3000",
     "http://localhost:3001",
     "https://api.nomoreparties.co/beatfilm-movies",
-    "http://api.diplomafan.nomoredomainsmonster.ru/",
-    "http://diplomafan.nomoredomainsmonster.ru/",
-    "https://api.diplomafan.nomoredomainsmonster.ru/",
-    "https://diplomafan.nomoredomainsmonster.ru/",
+    "http://api.diplomafan.nomoredomainsmonster.ru",
+    "http://diplomafan.nomoredomainsmonster.ru",
+    "https://api.diplomafan.nomoredomainsmonster.ru",
+    "https://diplomafan.nomoredomainsmonster.ru",
   ];
 
   const { origin } = req.headers;
